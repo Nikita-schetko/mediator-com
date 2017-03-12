@@ -60,5 +60,8 @@
   "bugs": {
     "url": "https://github.com/Nikita-schetko/mediator-com/issues"
   },
-  "homepage": "https://github.com/Nikita-schetko/mediator-com#readme"
+  "homepage": "https://github.com/Nikita-schetko/mediator-com#readme",
+  "dependencies": {
+    "semantic-ui": "^2.2.9"
+  }
 }

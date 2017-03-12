@@ -92,6 +92,13 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
+
+gulp.task('semantic', () => {
+  return gulp.src('app/semantic/**/*')
+  .pipe(gulp.dest('dist/semantic'));
+});
+    
+
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
@@ -165,7 +172,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'semantic'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
