@@ -100,9 +100,10 @@ gulp.task('semantic', () => {
     
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean-tmp', del.bind(null, ['.tmp']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean-tmp', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
     browserSync.init({
       notify: false,
       port: 9000,
